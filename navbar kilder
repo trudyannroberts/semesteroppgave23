@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Riktig størrelse på forskjellige skjermer -->
+    <meta charset="UTF-8" />
+    <title>Semesteroppgave høst 2023</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body> 
+    <ul> <!--Navigasjonsbar lages som liste-->
+        <li><a href="#home">Hjem</a></li>
+        <li><a href="#prosjekt">Prosjektledelse og prosjektarbeid</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Systemutvikling</a> <!--Undermeny hentet fra w3School-->
+          <div class="dropdown-content">
+            <a href="#">Tradisjonelle</a>
+            <a href="#">Agile</a>
+          </div>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Webutvikling og UX</a>
+            <div class="dropdown-content">
+              <a href="#">Fase 1</a>
+              <a href="#">Fase 2</a>
+              <a href="#">Fase 3</a>
+            </div>
+            <li><a class="active" href="#kilder">Kilder</a></li> <!--Aktiv link-->
+        </li>
+      </ul>
+    </div>
+</body>
+</html>
