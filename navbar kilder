@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body> 
+ <div class="header">
+    <h1><img src="images/logo.png" class="logo" alt="logo"> Semesteroppgave 2023: Gruppe 10 </h1>
+    </div>
     <ul> <!--Navigasjonsbar lages som liste-->
         <li><a href="#home">Hjem</a></li>
         <li><a href="#prosjekt">Prosjektledelse og prosjektarbeid</a></li>
