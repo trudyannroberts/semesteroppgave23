@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Web- og systemutvikling </title>
+ 
+<h1 style="text-align: center;font-family: georgia;color: #666666;"> Web- og systemutvikling
+
+ <div class="topnav">
+   <input type="text" placeholder="Search.."> </h1>
+   
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- viewport sier at skjermens vidde regnes som fullstørrelse - dvs at nettsiden tilpasser seg vidden på skjermen man ser nettsiden på.-->
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+<!-- "hidden" skjuler innholdet i boksen hvis det går utover kantene -->
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #fed567;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+  <!-- class=closebtn får menyen til å forsvinne når man klikker på x? en close-button lages når man bruker "&times;" symbolet -->
+  <a href="#">Forside</a>
+  <a href="#">Prosjektledelse</a>
+  <a href="#">Systemutvikling</a>
+  <a href="#">Webutvikling</a>
+  <a href="#">Kilder</a>
+</div>
+
+<span style="font-size:30px;color: #666666;cursor:pointer" onclick="openNav()">&#9776; meny</span>
+
+<script>
+<!-- "script" = javascript-->
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+<!-- åpner baren og bestemmer hvor mye av baren som skal vises når man trykker på den -->
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0px";
+<!-- lukker baren og bestemmer hvor mye skal synes av baren når den lukkes -->
+}
+</script>
+
+
+
+<h2 style=text-align:center;font-family:georgia;color:#666666;"> Tradisjonelle metoder innenfor systemutvikling </h2>
+
+<p style=font-family:georgia;margin-left:100px;margin-right:100px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+
+Ut iaculis pulvinar tortor id interdum. Sed sit amet molestie ipsum. Fusce at felis urna. Sed nec ante id quam consequat euismod. Duis sit amet
+posuere nibh. Ut velit nunc, congue id ornare eget, volutpat in massa. Maecenas vestibulum nunc vitae accumsan varius. Curabitur suscipit leo massa.
+Integer pulvinar lacus sit amet consequat tempor. Vivamus sem massa, pellentesque in massa nec, congue suscipit sapien. <br><br>
+
+Quisque accumsan rutrum nibh in hendrerit. <strong><em>In ut enim laoreet, </strong></em> laoreet dolor non, egestas nulla. In hac habitasse platea 
+dictumst. Cras ut ipsum eget lacus consectetur sollicitudin. Vestibulum at mollis nibh. In nec velit tellus. Nulla mauris odio, egestas id tortor vitae,
+dictum sollicitudin purus. <br><br>
+
+Vestibulum ac justo nisi. Vestibulum sit amet magna odio. Phasellus vel blandit neque, pellentesque congue magna. Nulla euismod auctor nisi, in ornare 
+sapien venenatis sit amet. Vivamus porttitor viverra nibh et efficitur. Aenean vitae turpis pellentesque, dictum sem non, facilisis dui. Donec malesuada 
+eros et sem porttitor eleifend. Sed massa ligula, cursus vel porta a, porta vel elit. Vestibulum et tincidunt magna. Quisque sit amet luctus elit, non accumsan velit. <br><br>
+
+
+</p>
+
+
+<!--
+tutorials/info: https://devpractical.com/close-button-html-css/ 
+https://teamtreehouse.com/community/what-is-meta-name-viewport-content-widthdevicewidth-initialscale10 (viewport forklaring)
+-->
+
+    
+</div>
+
+</body>
+</html>
+
+
+<!--https://templates.framework-y.com/yellowbusiness/pages/features/containers/scroll-box-collapse.html
+View-source: https://templates.framework-y.com/yellowbusiness/pages/index-business.html
+https://www.w3schools.com/howto/howto_css_searchbar.asp
+https://www.w3schools.com/html/default.asp
+https://www.w3schools.com/csS/css_grid.asp-->
