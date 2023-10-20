@@ -1,0 +1,426 @@
+/* Nullstiller noen standardstiler for alle elementer */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+/* Stiler for hele nettsiden */
+body {
+	font-family: poppins;
+	line-height: 1.5;
+}
+/* Fjerner understrek fra koblinger (lenker) */
+a{
+	text-decoration: none;
+}
+/* Fjerner standard listestiler for ul-elementer */
+ul{
+	list-style: none;
+}
+/* Begrenser bredden til innholdet og sentrerer det */
+.container{
+	max-width: 1170px;
+	margin: auto;
+	
+}
+/* Oppretter en flex container for rader med innhold */
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Justerer vertikal justering av elementer i en rad */
+.align-items-center{
+	align-items: center;
+}
+/* Justerer horisontal justering av elementer i en rad */
+.justify-content-between{
+	justify-content: space-between;
+}
+/* Stiler for header-seksjonen */
+/* header-stil starter her */
+header{
+	display: flex;
+	justify-content: center;
+	padding:7px;
+	position: relative;
+	background-color: transparent;
+}
+/* Stiler for logo og navigasjon innenfor header */
+.header .logo,
+.header .nav{
+	padding:5px;
+	
+	}
+.header .logo a{
+	font-size: 23px;
+	color: #363030ad;
+	text-transform: bold;
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+	
+	 }
+	 /* Stiler for navigasjons elementer */
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 20px;
+}
+.header .nav ul li a{
+	
+	display: block;
+	font-size: 19px;
+	padding:10px 0;
+	color: rgba(0, 0, 0, 0.7);
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+}
+/* Hover effekt for elementene i nav baren */
+.header .nav ul li a:hover,
+.header .nav ul li a.active{
+	color: #ff0000;
+}
+/* Stil for #nav-check, som er en skjult boks for å kontrollere navigasjonsmenyen */
+.header #nav-check{
+	position: absolute; /* Posisjon er absolutt i forhold til foreldrelementet */
+	opacity: 0; /* Gjør elementet usynlig (0 gjennomsiktighet) */
+	pointer-events: none; /* Deaktiver museklikk på dette elementet */
+}
+/* Stil for .nav-toggler, som er knappen for å åpne/lukke navigasjonsmenyen */
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #c33c3c;
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-right: 16px;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 20px;
+	background-color: whitesmoke;
+	position: relative;
+}
+/*ekstra linjene i knappen */
+.nav-toggler span::before,
+.nav-toggler span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: whitesmoke;
+   left:0;
+}
+.nav-toggler span::before {
+	top: -6px; /* Plasser 6 piksler over toppen av span-elementet for å lage en "X" når knappen er åpen */
+}
+
+/*  den nederste linjen i knappen */
+.nav-toggler span::after {
+	top: 6px; 
+}
+/* Mediestil for visning på mindre skjermer */
+@media(max-width: 750px){
+    .nav-toggler{
+    	display: flex;
+    }
+    .header .nav{
+    	position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+    	background-color: rgba(247, 244, 244, 0.235);
+    	border-top: 0.5px solid rgb(255, 0, 0);
+    	opacity:0;
+    	visibility: hidden;
+	
+    }
+    .header .nav ul li{
+    	display: flex;
+    	margin:-1rem; /* Justerer margen for (mobilvisning) */
+    }
+    .header #nav-check:checked ~ .nav{
+       opacity: 1;
+       visibility: visible;
+    }
+    .header #nav-check:focus ~ .nav-toggler{
+    	box-shadow: 0 0 15px #ff0000; /* Gir skyggeeffekt  */
+    }
+    .header #nav-check:checked ~ .nav-toggler span{
+    	background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+    	top:0;
+    	transform: rotate(45deg);
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+    	top:0;
+    	transform: rotate(-45deg);
+    }
+}
+/* Stiler for den generelle seksjonen */
+
+section {
+	display: flex; /* Bruker flex for å justere innholdet */
+	flex-direction: column; /* Innholdet  i kolonner */
+	align-items: center; /* Sentrerer innholdet vertikalt */
+	padding: 110px 100px; /* Legger til polstring rundt innholdet */
+	color: #000; /* Angir tekstfargen */
+}
+/* Mediestil for mindre skjermer */
+@media (max-width:750px) {
+	section {
+		padding: 100px 50px;
+	}
+}
+/* Mediestil for enda mindre skjermer */
+@media (max-width:600px) {
+	section {
+		padding: 125px 30px;
+	}
+}
+/* Stiler for avsnitt innenfor seksjonen */
+section p {
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+.banner-area {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+/* Stiler for bakgrunnsbilde */
+.banner-area .banner-img {
+	background-image: url(img/a1.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index:-1;
+	background-position: center center;
+}
+/* Overlay-effekt for bakgrunnsbildet */
+.banner-area .banner-img::after {
+	content: ''; /* Legger til et tomt innholdselement */
+	position: absolute; /* Angir absolutt posisjon for overlay */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000; /* Bakgrunnsfarge for overlay */
+	opacity: .7; /* Gjennomsiktighet for overlay */
+	
+}
+/* Stiler for overskrift og tekst i banner-området */
+.banner-area h1 {
+	margin-bottom: 15px;
+	font-size: 65px;
+	text-transform: uppercase;
+}
+.banner-area h1 span {
+	color: #bf0a30; /* Angir tekstfargen for delen av overskriften */
+}
+.banner-area h3 {
+	font-size: 25px;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+@media (max-width:800px) {
+	.banner-area {
+		min-height: 600px;
+	}
+	.banner-area h1 {
+		font-size: 27px;
+	}
+	.banner-area h3 {
+		font-size: 20px;
+	}
+	.banner-area a.banner-btn {
+		padding: 8px 20px;
+	}
+}
+
+/* Stiler for "about området" */
+
+/* Stil for <ul> og <li> elementene  */
+ul.about-content {
+	width: 100%; /* Full bredde for innholdet */
+	display: flex; /* Bruk flex-boksmodell for layout */
+	flex-wrap: wrap; /* Tillat innholdet å bryte til ny linje ved behov */
+	justify-content: center; /* Sentrer innholdet horisontalt */
+}
+.about-content li {
+	padding: 20px;
+	height: 500px;
+	background-clip: content-box;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+/* Stil for venstre sideav layouten */
+.about-left {
+	flex-basis: 30%;
+	background-image: url(img/a3.jpg);
+}
+.about-right {
+	flex-basis: 70%;
+}
+.about-right h2 {
+	font-size: 35px;
+}
+.about-area p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	line-height: 1.5;
+	text-align: left;
+	padding-left: 0;
+}
+.section-title {
+	text-transform: uppercase;
+	font-size: 50px;
+	margin-bottom: 5%;
+}
+.section-title span {
+	color: #bf0a30;
+}
+.about-right h2 {
+	margin-bottom: 3%;
+	font-size: 25px;
+}
+.about-btn {
+	padding: 15px 35px;
+	background: #bf0a30;
+	border-radius: 50px;
+	text-transform: uppercase;
+	color: #fff;
+}
+@media (max-width: 1000px) {
+	.section-title {
+		font-size: 35px;
+	}
+	.about-left, .about-right {
+		flex-basis: 100%;
+	}
+	.about-content li {
+		padding: 8px;
+	}
+}
+/*quote area*/
+/* Bakgrunnsbilde og gradient effekt */
+.quote-area {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/a2.jpg); /* Bakgrunnsgradient og bilde */
+	-webkit-background-size: cover; /* Bakgrunnsbilde-skalering for eldre nettlesere */
+	background-size: cover; /* Bakgrunnsbilde-skalering */
+	background-position: center center; /* Sentrer bakgrunnsbildet */
+	background-attachment: fixed; /* Fikser bakgrunnsbildet i visningen */
+	color: #fff; /* Tekstfarge for "quote area" */
+	text-align: center; /* Sentrert tekst */
+}
+/* Stiler for "services area" */
+
+ul.services-content {
+	width: 100%; /* Full bredde for innholdet */
+	display: flex; /* Bruk fle for layout */
+	flex-wrap: wrap; /* Tillat innholdet å bryte til ny linje ved behov */
+	justify-content: center; /* Sentrer innholdet horisontalt */
+}
+.services-content li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+	
+}
+/* Stil for bilder */
+.services-content img {
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 5%;
+	 }
+	 /* Stil for overskriften (h4) kunn innenfor "services-content" */
+.services-content li h4 {
+	font-size: 20px;
+	margin-bottom: 25px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 3px;
+	box-shadow: #bf0a30;
+}
+.services-content li p {
+	margin: 0; /* Null margin rundt avsnitt */
+}
+@media (max-width:1000px) {
+	.services-content li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+	.services-content li:last-child {
+		margin-bottom: 0;
+	}
+	.services-content li p {
+		padding: 0;
+	}
+}
+/* Stiler for "aboutus area" */
+
+/* Stil for <ul> elementet som inneholder kontaktinnholdet */
+ul.aboutus-content {
+	width: 100%; 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+}
+.aboutus-content li {
+	padding: 0 30px;
+	flex-basis: 33%;
+	text-align: center;
+}
+/* Stil for ikonene*/
+.aboutus-content li i {
+	font-size: 50px;
+	color: #bf0a30;
+	margin-bottom: 25px;
+}
+.aboutus-content li p {
+	margin: 0;
+}
+@media (max-width: 1000px) {
+	.aboutus-content li {
+		flex-basis: 100%;
+		margin-bottom: 65px;
+	}
+	.aboutus-content li:last-child {
+		margin-bottom: 0;
+	}
+	.aboutus-content li p {
+		padding: 0;
+	}
+}
+/*footer */
+
+footer {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	padding: 30px 0;
+}

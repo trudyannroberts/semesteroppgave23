@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>system- og webutvikling</title>
+	<!-- Eksterne stiler og fonter -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+      /* Stiler for tilbake til topp-knappen */
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: rgba(255, 0, 0, 0.523);
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+          background-color: #555;
+        }
+
+        </style>
+</head>
+<body>
+	  <!-- Header-seksjon -->
+	<header class="header">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+			   <div class="logo">
+				 <a href="index.html">Web Og Systemutvikling</a>
+			   </div>
+			   <input type="checkbox" id="nav-check">
+			   <label for="nav-check" class="nav-toggler">
+				  <span></span>
+			   </label>
+			   <nav class="nav">
+				  <ul>
+					 <li><a href="#" class="active">Hjem</a></li>
+					 <li><a href="prosjektarbeid.html">prosjektarbeid</a></li>
+					 <li><a href="ux.html">Webutvikling og UX</a></li>
+					 <li><a href="systemutvikling.html">Systemutvikling</a></li>
+					 <li><a href="kilder.html">Kilder</a></li>
+					 
+				  </ul>
+			   </nav>
+			</div>
+		</div>
+	 </header>
+	   <!-- Banner-seksjon -->
+	<section class="banner-area">
+		<div class="banner-img"></div>
+		<h1>Web Og <span>Systemutvikling</span></h1>
+	</section>
+	<!-- kort intro område -->
+	<section class="about-area" id="about">
+		<h3 class="section-title">Om web og <span>systemutvikling</span></h3>
+		<ul class="about-content">
+			<li class="about-left"></li>
+			<li class="about-right">
+				<h2>I dagens digitale tidsalder er kunnskap om web- og systemutvikling av avgjørende betydning. </h2>
+				<p>Her er hvorfor:</p>
+				<p><i class="fa fa-arrow-right"></i> Karriere Muligheter: Læring av web- og systemutvikling åpner døren til en verden av spennende karrieremuligheter.</p>
+				<p><i class="fa fa-arrow-right"></i> Innovasjon: De som forstår hvordan man bygger og utvikler systemer, er i stand til å utforske nye ideer og bidra til å forme fremtidens teknologi.</p>
+				<p><i class="fa fa-arrow-right"></i>Problemløsning:Det gir deg muligheten til å løse komplekse utfordringer og utvikle analytiske evner som er nyttige i en rekke fagområder.</p>
+				<p><i class="fa fa-arrow-right"></i> Brukervennlighet: Å gi folk en god opplevelse når de bruker nettsider, apper eller systemer.</p>
+			</li>
+		</ul>
+	</section>
+	<section class="quote-area">
+		<div class="quote-content">
+			<h2>Programmering er å bryte av en stor umulig oppgave i flere svært små mulige oppgaver.</h2>
+			<p>- Jazzwant</p>
+		</div>
+	</section>
+	<section class="services-area" id="services">
+		<h3 class="section-title">Her Finner<span> du mer om</span></h3>
+		<ul class="services-content">
+			<li>
+                <a href="prosjektarbeid.html" class="button-link">
+                    <img alt="" src="img/1.jpg">
+                    <h4>Prosjektledelse og prosjektarbeid</h4>
+                    <p>Prosjektledelse krever planlegging, organisering, styring, målstyring, kommunikasjon og evaluering.</p>
+                </a>
+            </li>
+            <li>
+                <a href="ux.html" class="button-link">
+                    <img alt="" src="img/2.jpg">
+                    <h4>Webutvikling og UX</h4>
+                    <p>Webutvikling og UX fokuserer på design, responsivitet og brukervennlighet.</p>
+                </a>
+            </li>
+			<li>
+				<a href="systemutvikling.html" class="button-link">
+				<img alt="" src="img/3.jpg">
+				<h4>Systemutvikling </h4>
+				<p>Systemutvikling omfatter analyse, design, implementasjon, testing og vedlikehold av programvare.</p>
+			</a>
+			</li>
+			<li>
+				<a href="kilder.html" class="button-link">
+				<img alt="" src="img/4.jpg">
+				<h4>Kilder</h4>
+				<p>Klikk her for å finne og utforske kildene.</p>
+			</a>
+			</li>
+		</ul>
+	</section>
+	<section class="aboutus-area" id="aboutus">
+		<h3 class="section-title">Om <span>Oss</span></h3>
+		<ul class="aboutus-content">
+			<li>
+				<i class="fa fa-user"></i>
+				<p>Aryan Hedow <br> Html/Css</p>
+			</li>
+			<li>
+				<i class="fa fa-user"></i>
+				<p>Trudy Roberts <br>
+					Agile metoder</p>
+			</li>
+			<li>
+				<i class="fa fa-user"></i>
+				<p>Mari Østern<br>
+					Tradisjonelle metoder</p>
+			</li>
+			<li>
+				<i class="fa fa-user"></i>
+				<p>Thea Haugan<br>
+					Prosjektledelse og prosjektarbeid</p>
+			</li>
+			<li>
+				<i class="fa fa-users"></i>
+				<p>August Monen og Trudy Roberts<br>
+					Introduksjon til webutvikling og UX</p>
+			</li>
+		</ul>
+	</section>
+	
+	<footer>
+		<p>&copy; Semesteroppgaven 2023 G10</p>		
+	</footer>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></button>
+		<!-- JavaScript for tilbake til topp-knappen -->
+			<script>
+			// Få kannapen 
+			let mybutton = document.getElementById("myBtn");
+			
+			// når man blar nedover viser knappen seg
+			window.onscroll = function() {scrollFunction()};
+			
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			  } else {
+				mybutton.style.display = "none";
+			  }
+			}
+			
+			// Når man trykker på knappen sender deg opp over igjen!
+			function topFunction() {
+			  document.body.scrollTop = 0;
+			  document.documentElement.scrollTop = 0;
+			}
+			</script>
+</body>
+</html>
